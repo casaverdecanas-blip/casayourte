@@ -1,2 +1,2 @@
-# casaverde-2-0
-Versión 2 de CasaVerdeCanas
+# RemateTaller
+sitio de administración y control de stock
