@@ -53,7 +53,7 @@ pasar a *Français* primero.
 
 ## Los nombres de las imágenes
 
-`hero` · `traj1` a `traj5` · `dif1` a `dif6` · `int1` a `int3` · `co` · `ws`
+`hero` · `traj1` a `traj5` · `dif1` a `dif8` · `int1` a `int3` · `co` · `ws`
 
 El botón **Todas las imágenes** descarga las 17 con el nombre correcto, por si hace
 falta reconstruir la carpeta.
@@ -112,6 +112,18 @@ los dos como enlaces directos.
 
 El **documento de enfoque** (`enfoque-yurtour.html`) no va acá. Contiene costos,
 márgenes, tarifa horaria y estrategia. Es material interno y el repositorio es público.
+
+## Protocolo de correcciones
+
+Cada entrega de cambios llega como **un solo zip que contiene únicamente los
+archivos modificados**, con la estructura de carpetas del repositorio y un
+`CAMBIOS.md` adentro que dice qué toca y por qué.
+
+Para aplicar: copiar el contenido del zip sobre la raíz del repositorio. Nada más.
+
+Si hay imágenes modificadas, vienen ya dentro de `img/`, `proceso/` o `video/`
+con el nombre exacto que reemplazan, así que no hay que decidir dónde va cada una.
+`CAMBIOS.md` siempre las lista.
 
 ## Notas técnicas
 

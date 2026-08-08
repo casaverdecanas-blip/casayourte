@@ -95,6 +95,19 @@ h1 em{font-style:italic;color:var(--blond);font-weight:400}
 .bleed figcaption{position:absolute;left:var(--pad);bottom:1.5rem;right:var(--pad);
   color:var(--wool);text-shadow:0 1px 14px rgba(0,0,0,.85)}
 
+/* ---------- idea ---------- */
+.idea-h{font-size:clamp(1.9rem,5vw,3.4rem);max-width:30ch;font-weight:300;
+  font-variation-settings:"SOFT" 40,"WONK" 1}
+.idea-h em{font-style:italic;color:var(--blond)}
+.idea-cols{margin-top:clamp(2rem,4vw,3rem);display:grid;gap:1.4rem;max-width:78ch}
+.idea-cols p{font-size:1rem;line-height:1.62;color:#c2b9a7}
+.idea-k{margin-top:clamp(2rem,4vw,2.8rem);padding-top:1.4rem;border-top:1px solid #3b342c;
+  font-family:var(--disp);font-style:italic;font-weight:300;color:var(--blond);
+  font-size:clamp(1.2rem,2.6vw,1.75rem);line-height:1.28;max-width:34ch;
+  font-variation-settings:"SOFT" 45,"WONK" 1}
+@media(min-width:900px){.idea-cols{grid-template-columns:1fr 1fr;gap:1.4rem 2.6rem}
+  .idea-cols p:first-child{grid-column:1/-1;font-size:1.08rem;color:var(--wool);max-width:52ch}}
+
 /* ---------- proceso ---------- */
 .proc{margin:clamp(2.2rem,5vw,3.4rem) 0 0}
 .proc-stage{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0E0C0A;
@@ -247,6 +260,18 @@ h1 em{font-style:italic;color:var(--blond);font-weight:400}
   <figcaption class="mono" data-i="cap.hero"></figcaption>
 </figure>
 
+<!-- IDEA -->
+<section class="wrap idea-sec">
+  <span class="eyebrow" data-i="id.eyebrow"></span>
+  <h2 class="idea-h" data-i="id.title"></h2>
+  <div class="idea-cols">
+    <p data-i="id.b1"></p>
+    <p data-i="id.b2"></p>
+    <p data-i="id.b3"></p>
+  </div>
+  <p class="idea-k" data-i="id.k"></p>
+</section>
+
 <!-- PROCESO -->
 <section class="wrap proc-sec">
   <span class="eyebrow" data-i="pr.eyebrow"></span>
@@ -330,6 +355,14 @@ h1 em{font-style:italic;color:var(--blond);font-weight:400}
     <article class="diff reveal">
       <div class="diff-fig"><img data-slot="dif6" src="img/dif6.jpg" alt="" loading="lazy" decoding="async"></div>
       <span class="spec" data-i="d6.s"></span><h3 data-i="d6.t"></h3><p data-i="d6.b"></p>
+    </article>
+    <article class="diff reveal">
+      <div class="diff-fig"><img data-slot="dif7" src="img/dif7.jpg" alt="" loading="lazy" decoding="async"></div>
+      <span class="spec" data-i="d7.s"></span><h3 data-i="d7.t"></h3><p data-i="d7.b"></p>
+    </article>
+    <article class="diff reveal">
+      <div class="diff-fig"><img data-slot="dif8" src="img/dif8.jpg" alt="" loading="lazy" decoding="async"></div>
+      <span class="spec" data-i="d8.s"></span><h3 data-i="d8.t"></h3><p data-i="d8.b"></p>
     </article>
   </div>
 </section>
@@ -457,38 +490,46 @@ es:{
  "in.c2":"De noche, con la iluminación perimetral del skydome, la geometría del techo se vuelve el espectáculo. Para alojamiento turístico, esto es el producto.",
  "cap.hero":"Último proyecto · yurta terminada con deck perimetral curvo, anexo acoplado y grandes aberturas vidriadas",
 
+ "id.eyebrow":"La idea",
+ "id.title":"Una yurta no se vuelve desmontable: <em>ya lo era</em>. Lo que agregamos es todo lo demás.",
+ "id.b1":"La yurta viene de un pueblo nómade. Es desmontable por origen, como una carpa: eso no es una prestación que se le añada, es su naturaleza. Lo que cambió en Europa fue el habitante, no la estructura: gente que no se muda, pero que quiere poder desarmar.",
+ "id.b2":"Y ahí aparece el sentido real de poder desarmar cuando no sos nómade: construir con poco impacto sobre el territorio. Una yurta no cimenta, no excava, no impermeabiliza el suelo. Se apoya, se habita, y el día que se va el terreno vuelve a lo que era. Es una manera de construir que respeta el ecosistema en el que se instala en lugar de transformarlo.",
+ "id.b3":"El problema es que casi siempre se paga ese respeto con incomodidad. Nuestro trabajo va en la dirección opuesta: llevar la capacidad mecánica y la eficiencia térmica de la estructura hasta donde da, sin que pierda la esencia. Piso aislado, doble techo ventilado, doble anillo que une piso y muros, aberturas que escurren el agua. Lo más parecido a una casa que se pueda desarmar.",
+ "id.k":"Lo mejor de la yurta y lo mejor de una casa, en la misma estructura. Eso es CasaYourte.",
 "pr.eyebrow":"El proceso",
  "pr.title":"Doce momentos de una obra, en orden.",
- "pr.lede":"Del taller a la yurta habitada. Cada pieza que aparece acá está calculada y cortada antes de llegar al terreno: lo que se ve en obra es armado, no improvisación.",
- "pr.c1":"Taller: los módulos del piso, cortados y numerados antes de salir.",
- "pr.c2":"El plancher completo apoyado sobre los puntos de nivel, listo para atornillar.",
- "pr.c3":"El trei desplegado y abulonado, con el ángulo del rombo a 60°.",
- "pr.c4":"El anillo periférico: fracciones de circunferencia con los encastres de cada percha.",
- "pr.c5":"El toono y el aro del skydome puestos en posición desde arriba.",
- "pr.c6":"Las lonas extendidas en el suelo. Cortadas y cosidas en taller propio.",
- "pr.c7":"Cierre de la capa superior del techo sobre el alero.",
- "pr.c8":"El doble techo terminado: la lámina de aire queda entre las dos capas.",
- "pr.c9":"Piezas curvas en el banco. Todo lo redondo empieza recto.",
+ "pr.lede":"Del taller a la yurta habitada, con lo que hace cada pieza. Cada elemento está calculado y cortado antes de llegar al terreno: lo que se ve en obra es armado, no improvisación.",
+ "pr.c1":"Taller: fabricación del anillo periférico. La yurta lleva dos anillos completos, uno en el perímetro del piso y otro en la parte alta del trei.",
+ "pr.c2":"El anillo periférico ensamblado dentro de la estructura del piso, antes del aislante y de la capa de madera que lo cubre.",
+ "pr.c3":"Fijación del anillo periférico superior: abulonado al trei y unido con escuadras metálicas al anillo que va en el piso.",
+ "pr.c4":"Fabricación del aro central. Las ranuras son canales de ventilación de la lona exterior: dejan salir el aire caliente y evitan la condensación.",
+ "pr.c5":"Instalación del aro central y los triángulos estructurales, que impiden la rotación del aro central respecto del perimetral.",
+ "pr.c6":"Costura en terreno del aislante de PET. Su resistencia a la tracción permite una capa integral que no se desplaza sobre el cono del techo.",
+ "pr.c7":"Colocación de la lona sobre el cono del techo.",
+ "pr.c8":"El doble techo cerrado, con el alero sobre los muros.",
+ "pr.c9":"Umbrales de puertas y ventanas: piezas únicas que recogen el escurrimiento de los montantes y lo llevan afuera del piso.",
  "pr.c10":"Trabajo de a dos en el borde del piso. Nada de esto se hace solo.",
- "pr.c11":"El interior terminado, mirando al skydome.",
- "pr.c12":"La yurta habitada, con el deck y el anexo.",
+ "pr.c11":"Vista interior con la tapa que cierra el aro central y bloquea los rayos ultravioleta en los momentos de más calor.",
+ "pr.c12":"La yurta habitada, con el deck perimetral y el anexo.",
  "traj.eyebrow":"Trayectoria","traj.title":"Cada yurta nos enseñó algo que la siguiente ya trae resuelto.",
  "traj.lede":"No es una línea de productos. Es una secuencia de problemas resueltos, uno por obra, con los clientes y los constructores que nos cruzamos.",
  "s1.yr":"Primera yurta","s1.t":"La forma tradicional","s1.b":"Trei a 45° atado con cuerdas, perchas sin desborde, piso cortado recto al ras del chasis. Aprendimos dónde estaban los límites: la pared empujaba hacia adentro y el agua bajaba por la tela.",
  "s2.yr":"Primer desarrollo","s2.t":"Del nudo al bulón","s2.b":"Trei abulonado con medida exacta entre chasis. Toono con caras a 30°, skydome de doble pared con gato y elásticos. El cable pasa a trabajar en el borde superior de la pared.",
  "s3.yr":"Desborde de perchas","s3.t":"El techo empieza a proteger la pared","s3.b":"Primer ensayo de perchas con desborde: el cable trabaja en el borde de las perchas y la carga se reparte simétrica. El alero desvía el agua lejos de la tela. Apertura del skydome por triple gato: más seguridad y orientación elegible.",
  "s4.yr":"Tierra y paja","s4.t":"Anillo periférico y circulación de aire","s4.b":"Primer proyecto de yurta en tierra y paja. Reforzamos con anillo periférico, ampliamos el desborde de techo y abrimos una cámara para que el aire circule entre la tela exterior y la aislación.",
- "s5.yr":"Última generación","s5.t":"Doble techo y primera capa triangulada","s5.b":"Doble techo con lámina de aire y alero de 50 cm, trei cerrado sobre anillo periférico, y la primera capa de techo en estructura triangular en lugar de radial. El techo se desmonta por cuartos o quintos.",
+ "s5.yr":"Última generación","s5.t":"Doble techo y primera capa triangulada","s5.b":"Doble techo con lámina de aire y alero de 50 cm, trei cerrado sobre anillo periférico, y la primera capa de techo en estructura triangular en lugar de radial. El anillo periférico se ensambla en el lugar y se desarma en seis partes para el transporte, en una yurta de siete metros.",
 
  "dif.eyebrow":"Diferencial técnico","dif.title":"Seis decisiones que separan esto de una yurta de catálogo.",
  "dif.lede":"Ninguna es estética. Cada una salió de un problema concreto en obra y cambia cómo la estructura resiste, respira y se desarma.",
  "d1.s":"Trei · 60° en lugar de 45°","d1.t":"La pared empuja menos","d1.b":"Abriendo el rombo del trei a 60° baja la tensión de la pared hacia el interior y la estructura queda más estable frente a la carga vertical. El trei va abulonado y se fija al piso por una madera que sigue el perímetro.",
- "d2.s":"Anillo periférico","d2.t":"El techo se vuelve transportable","d2.b":"Fracciones de circunferencia montadas mitad sobre mitad, apoyadas en todos los montantes y en el borde superior del trei. Trabaja junto al cable y al toono: multiplica la portabilidad del techo y permite desarmarlo por cuartos o quintos según el diámetro.",
- "d3.s":"Primera capa · estructura triangular","d3.t":"Geometría que carga","d3.b":"En lugar de radios, la primera capa se arma en triángulos. La geometría participa de la portabilidad del techo y sube la capacidad y la resistencia del conjunto. La segunda capa sí va en radios, para resistir la tensión de cierre de la tela.",
- "d4.s":"Doble techo · alero 50 cm","d4.t":"Una cámara de aire que circula","d4.b":"Entre la aislación y la tela estanca queda una lámina de aire en movimiento. Además habilita un alero grande sobre las paredes: la aislación termina en el borde del muro y la capa superior se extiende todo lo que se quiera.",
+ "d2.s":"Doble anillo periférico","d2.t":"El piso y los muros pasan a ser un solo cuerpo","d2.b":"No es un anillo, son dos: uno completo en todo el perímetro del piso y otro en la parte alta del trei. El superior va abulonado al trei y unido con escuadras metálicas al anillo del piso, que queda dentro de la estructura, bajo el aislante y la capa de madera. Piso y muros dejan de ser dos piezas apoyadas y forman una estructura sólida. En una yurta de siete metros cada anillo se compone de seis piezas, fabricadas en taller y ensambladas en el lugar.",
+ "d3.s":"Primera capa · triángulos estructurales","d3.t":"El aro central no puede girar","d3.b":"En lugar de radios, la primera capa se arma en triángulos, y su función es precisa: impedir la rotación del aro central respecto del aro perimetral. De paso dan apoyo a las perchas radiales de la segunda capa y suben la resistencia mecánica del conjunto.",
+ "d4.s":"Doble techo · alero 50 cm","d4.t":"Una lámina de aire ventilada","d4.b":"Entre el Tyvek y la lona exterior queda una lámina de aire en movimiento. El aro central lleva canales de ventilación tallados que dejan salir el aire caliente acumulado y evitan la condensación. Además habilita un alero grande sobre las paredes: la aislación termina en el borde del muro y la capa superior se extiende todo lo que se quiera.",
  "d5.s":"Plancher modular","d5.t":"Piso que llega listo y se atornilla","d5.b":"Módulos calculados por diámetro, apoyados sobre puntos de nivel, cerrados con sargentos y atornillados cada 60 cm en zigzag. El corte final del perímetro se traza con compás desde el centro real de la estructura.",
- "d6.s":"Aislación · PET reciclado","d6.t":"Cámaras de aire sin circulación","d6.b":"El relleno busca el equilibrio entre lo compacto y lo esponjoso: homogéneo, sin tapar las vigas donde se fija la última capa. Usamos PET reciclado: no es nutritivo ni atrae roedores ni polilla, algo decisivo en una estructura que queda montada años en el campo. Mejor las botellas en los muros que en el mar.",
+ "d6.s":"Aislación · PET reciclado","d6.t":"Una capa integral que no se desplaza","d6.b":"El PET se elige por su resistencia mecánica a la tracción: cosido en terreno forma una capa entera y estable sobre el cono del techo, que no se corre una vez colocada. Y no es nutritivo ni atrae roedores ni polilla, algo decisivo en una estructura que queda montada años en el campo. Mejor las botellas en los muros que en el mar.",
 
+ "d7.s":"Umbrales de aberturas","d7.t":"El agua sale por fuera del piso","d7.b":"Cada puerta y cada ventana lleva un umbral hecho de una sola pieza de madera, que recoge el escurrimiento de los montantes y lo lleva hacia afuera de la estructura del piso. Es el punto por donde una yurta se arruina con los años, y acá está resuelto con carpintería.",
+ "d8.s":"Tapa del aro central","d8.t":"Se cierra contra el sol","d8.b":"El agujero central se cierra con una tapa desde el interior, bloqueando la entrada de rayos ultravioleta en los momentos de más calor. En clima subtropical eso no es un accesorio: es la diferencia entre un espacio habitable y un invernadero al mediodía.",
  "of.eyebrow":"Qué ofrecemos hoy","of.title":"Cuatro maneras de empezar, según lo que necesites.",
  "of.lede":"El taller en Uruguay arranca con maquinaria manual y va sumando máquinas. Por eso hoy vendemos primero lo que ya podemos hacer con excelencia: telas, planos y conocimiento.",
  "o1.n":"Línea 01","o1.t":"Lonas y telas a medida","o1.b":"Fabricamos en taller propio con nuestras máquinas de coser. Cortamos y cosemos según tus medidas reales, no según un catálogo.",
@@ -544,38 +585,46 @@ fr:{
  "in.c2":"De nuit, avec l'éclairage périphérique du skydome, la géométrie du toit devient le spectacle. Pour l'hébergement touristique, c'est cela le produit.",
  "cap.hero":"Dernier projet · yourte terminée avec terrasse périphérique courbe, annexe accolée et grandes ouvertures vitrées",
 
+ "id.eyebrow":"L'idée",
+ "id.title":"Une yourte ne devient pas démontable : <em>elle l'était déjà</em>. Nous ajoutons tout le reste.",
+ "id.b1":"La yourte vient d'un peuple nomade. Elle est démontable d'origine, comme une tente : ce n'est pas une prestation ajoutée, c'est sa nature. Ce qui a changé en Europe, c'est l'habitant, pas la structure : des gens qui ne se déplacent pas, mais qui veulent pouvoir démonter.",
+ "id.b2":"C'est là qu'apparaît le vrai sens de pouvoir démonter quand on n'est pas nomade : construire avec peu d'impact sur le territoire. Une yourte ne coule pas de fondations, ne creuse pas, n'imperméabilise pas le sol. Elle se pose, on l'habite, et le jour où elle part le terrain redevient ce qu'il était. C'est une façon de construire qui respecte l'écosystème où elle s'installe au lieu de le transformer.",
+ "id.b3":"Le problème est qu'on paie presque toujours ce respect par de l'inconfort. Notre travail va dans l'autre sens : pousser la capacité mécanique et l'efficacité thermique aussi loin que possible, sans perdre l'essence. Plancher isolé, double toit ventilé, double anneau qui lie plancher et murs, ouvertures qui évacuent l'eau. Ce qui ressemble le plus à une maison, en démontable.",
+ "id.k":"Le meilleur de la yourte et le meilleur d'une maison, dans la même structure. C'est CasaYourte.",
 "pr.eyebrow":"Le chantier",
  "pr.title":"Douze moments d'un chantier, dans l'ordre.",
- "pr.lede":"De l'atelier à la yourte habitée. Chaque pièce vue ici est calculée et coupée avant d'arriver sur le terrain : ce qui se passe sur le chantier est un assemblage, pas une improvisation.",
- "pr.c1":"Atelier : les modules du plancher, coupés et numérotés avant le départ.",
- "pr.c2":"Le plancher complet posé sur les points de niveau, prêt à visser.",
- "pr.c3":"Le trei déployé et boulonné, avec l'angle du losange à 60°.",
- "pr.c4":"L'anneau périphérique : fractions de circonférence avec les entailles de chaque perche.",
- "pr.c5":"Le toono et l'anneau du skydome mis en place depuis le haut.",
- "pr.c6":"Les toiles étendues au sol. Coupées et cousues dans notre atelier.",
- "pr.c7":"Fermeture de la couche supérieure du toit sur le débord.",
- "pr.c8":"Le double toit terminé : la lame d'air reste entre les deux couches.",
- "pr.c9":"Pièces courbes sur l'établi. Tout ce qui est rond commence droit.",
+ "pr.lede":"De l'atelier à la yourte habitée, avec le rôle de chaque pièce. Tout est calculé et coupé avant d'arriver sur le terrain : ce qui se passe sur le chantier est un assemblage, pas une improvisation.",
+ "pr.c1":"Atelier : fabrication de l'anneau périphérique. La yourte en compte deux complets, un au périmètre du plancher et un en haut du trei.",
+ "pr.c2":"L'anneau périphérique assemblé dans la structure du plancher, avant l'isolant et la couche de bois qui le recouvre.",
+ "pr.c3":"Fixation de l'anneau périphérique supérieur : boulonné au trei et relié par équerres métalliques à l'anneau du plancher.",
+ "pr.c4":"Fabrication de l'anneau central. Les rainures sont les canaux de ventilation de la toile extérieure : elles évacuent l'air chaud et évitent la condensation.",
+ "pr.c5":"Installation de l'anneau central et des triangles structurels, qui empêchent la rotation de l'anneau central par rapport au périphérique.",
+ "pr.c6":"Couture sur place de l'isolant PET. Sa résistance à la traction permet une couche intégrale qui ne se déplace pas sur le cône du toit.",
+ "pr.c7":"Pose de la toile sur le cône du toit.",
+ "pr.c8":"Le double toit fermé, avec le débord sur les murs.",
+ "pr.c9":"Seuils de portes et fenêtres : pièces uniques qui recueillent le ruissellement des montants et le conduisent hors du plancher.",
  "pr.c10":"Travail à deux au bord du plancher. Rien de tout cela ne se fait seul.",
- "pr.c11":"L'intérieur terminé, en regardant vers le skydome.",
- "pr.c12":"La yourte habitée, avec la terrasse et l'annexe.",
+ "pr.c11":"Vue intérieure avec le couvercle qui ferme l'anneau central et bloque les rayons ultraviolets aux heures les plus chaudes.",
+ "pr.c12":"La yourte habitée, avec la terrasse périphérique et l'annexe.",
  "traj.eyebrow":"Parcours","traj.title":"Chaque yourte nous a appris ce que la suivante apporte déjà résolu.",
  "traj.lede":"Ce n'est pas une gamme de produits. C'est une suite de problèmes résolus, un par chantier, avec les clients et les constructeurs rencontrés en chemin.",
  "s1.yr":"Première yourte","s1.t":"La forme traditionnelle","s1.b":"Trei à 45° attaché par cordes, perches sans débord, plancher coupé droit au niveau du châssis. Nous avons appris où étaient les limites : le mur poussait vers l'intérieur et l'eau descendait le long de la toile.",
  "s2.yr":"Premier développement","s2.t":"Du nœud au boulon","s2.b":"Trei boulonné, mesure exacte entre châssis. Toono avec faces à 30°, skydome double paroi avec vérin et élastiques. Le câble passe à travailler sur le bord supérieur du mur.",
  "s3.yr":"Débord de perches","s3.t":"Le toit commence à protéger le mur","s3.b":"Premier essai de perches avec débord : le câble travaille au bord des perches et la charge se répartit symétriquement. La visière écarte l'eau de la toile. Ouverture du skydome par triple vérin : plus de sécurité et orientation au choix.",
  "s4.yr":"Terre et paille","s4.t":"Anneau périphérique et circulation d'air","s4.b":"Premier projet de yourte en terre et paille. Renfort par anneau périphérique, débord de toit élargi, et une lame d'air ouverte pour que l'air circule entre la toile extérieure et l'isolation.",
- "s5.yr":"Dernière génération","s5.t":"Double toit et première couche triangulée","s5.b":"Double toit avec lame d'air et débord de 50 cm, trei bouclé sur anneau périphérique, et première couche de toit en structure triangulaire au lieu de radiale. Le toit se démonte par quart ou par cinquième.",
+ "s5.yr":"Dernière génération","s5.t":"Double toit et première couche triangulée","s5.b":"Double toit avec lame d'air et débord de 50 cm, trei bouclé sur anneau périphérique, et première couche de toit en structure triangulaire au lieu de radiale. L'anneau périphérique s'assemble sur place et se démonte en six parties pour le transport, sur une yourte de sept mètres.",
 
  "dif.eyebrow":"Différentiel technique","dif.title":"Six décisions qui séparent ceci d'une yourte de catalogue.",
  "dif.lede":"Aucune n'est esthétique. Chacune est née d'un problème concret sur chantier et change la façon dont la structure résiste, respire et se démonte.",
  "d1.s":"Trei · 60° au lieu de 45°","d1.t":"Le mur pousse moins","d1.b":"En ouvrant le losange du trei à 60°, la tension du mur vers l'intérieur diminue et la structure devient plus stable face à la charge verticale. Le trei est boulonné et fixé au plancher par un bois qui suit le périmètre.",
- "d2.s":"Anneau périphérique","d2.t":"Le toit devient transportable","d2.b":"Des fractions de circonférence posées moitié sur moitié, appuyées sur tous les montants et sur le bord supérieur du trei. Il travaille avec le câble et le toono : il multiplie la portabilité du toit et permet de le démonter par quart ou par cinquième selon le diamètre.",
- "d3.s":"Première couche · structure triangulaire","d3.t":"Une géométrie qui porte","d3.b":"Au lieu de rayons, la première couche est montée en triangles. La géométrie participe à la portabilité du toit et augmente la capacité et la résistance de l'ensemble. La deuxième couche, elle, est en rayons, pour résister à la tension de fermeture de la toile.",
- "d4.s":"Double toit · débord 50 cm","d4.t":"Une lame d'air qui circule","d4.b":"Entre l'isolation et la toile étanche subsiste une lame d'air en mouvement. Cela permet aussi un grand débord sur les murs : l'isolation se termine au bord du mur et la couche supérieure s'étend autant qu'on le souhaite.",
+ "d2.s":"Double anneau périphérique","d2.t":"Le plancher et les murs deviennent un seul corps","d2.b":"Ce n'est pas un anneau mais deux : un complet sur tout le périmètre du plancher et un autre en haut du trei. Le supérieur est boulonné au trei et relié par des équerres métalliques à l'anneau du plancher, qui reste dans la structure, sous l'isolant et la couche de bois. Plancher et murs cessent d'être deux pièces posées et forment une structure solide. Sur une yourte de sept mètres, chaque anneau se compose de six pièces, fabriquées en atelier et assemblées sur place.",
+ "d3.s":"Première couche · triangles structurels","d3.t":"L'anneau central ne peut plus tourner","d3.b":"Au lieu de rayons, la première couche est montée en triangles, avec une fonction précise : empêcher la rotation de l'anneau central par rapport à l'anneau périphérique. Ils soutiennent au passage les perches radiales de la deuxième couche et augmentent la résistance mécanique de l'ensemble.",
+ "d4.s":"Double toit · débord 50 cm","d4.t":"Une lame d'air ventilée","d4.b":"Entre le Tyvek et la toile extérieure subsiste une lame d'air en mouvement. L'anneau central porte des canaux de ventilation taillés qui évacuent l'air chaud et évitent la condensation. Cela permet aussi un grand débord sur les murs : l'isolation se termine au bord du mur et la couche supérieure s'étend autant qu'on le souhaite.",
  "d5.s":"Plancher modulaire","d5.t":"Un plancher qui arrive prêt et se visse","d5.b":"Modules calculés par diamètre, posés sur des points de niveau, fermés au serre-joint et vissés tous les 60 cm en zigzag. La coupe finale du périmètre se trace au compas depuis le centre réel de la structure.",
- "d6.s":"Isolation · PET recyclé","d6.t":"Des chambres d'air sans circulation","d6.b":"Le remplissage cherche l'équilibre entre le compact et le spongieux : homogène, sans couvrir les poutres où se fixe la dernière couche. Nous utilisons du PET recyclé : ni nutritif ni attractif pour les rongeurs ou les mites, ce qui est décisif pour une structure qui reste montée des années. Mieux vaut les bouteilles sur nos murs que dans la mer.",
+ "d6.s":"Isolation · PET recyclé","d6.t":"Une couche intégrale qui ne bouge pas","d6.b":"Le PET est choisi pour sa résistance mécanique à la traction : cousu sur place, il forme une couche entière et stable sur le cône du toit, qui ne se déplace plus une fois posée. Et il n'est ni nutritif ni attractif pour les rongeurs ou les mites, ce qui est décisif pour une structure qui reste montée des années. Mieux vaut les bouteilles sur nos murs que dans la mer.",
 
+ "d7.s":"Seuils des ouvertures","d7.t":"L'eau sort au-delà du plancher","d7.b":"Chaque porte et chaque fenêtre reçoit un seuil taillé dans une seule pièce de bois, qui recueille le ruissellement des montants et le conduit hors de la structure du plancher. C'est le point par lequel une yourte s'abîme avec les années, et il est résolu ici par la charpente.",
+ "d8.s":"Couvercle de l'anneau central","d8.t":"Il se ferme contre le soleil","d8.b":"Le trou central se ferme de l'intérieur par un couvercle qui bloque les rayons ultraviolets aux heures les plus chaudes. Sous climat subtropical ce n'est pas un accessoire : c'est la différence entre un espace habitable et une serre à midi.",
  "of.eyebrow":"Ce que nous proposons","of.title":"Quatre manières de commencer, selon votre besoin.",
  "of.lede":"L'atelier en Uruguay démarre avec de l'outillage manuel et s'équipe progressivement. Nous vendons donc d'abord ce que nous savons déjà faire avec excellence : les toiles, les plans et le savoir-faire.",
  "o1.n":"Ligne 01","o1.t":"Toiles sur mesure","o1.b":"Fabriquées dans notre atelier avec nos propres machines à coudre. Coupées et cousues selon vos mesures réelles, pas selon un catalogue.",
@@ -623,7 +672,8 @@ function paint(lang){
   const d=T[lang];
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i]").forEach(el=>{
-    const v=d[el.dataset.i]; if(v!==undefined) el.textContent=v;
+    const v=d[el.dataset.i]; if(v===undefined) return;
+    if(/<em>/.test(v)) el.innerHTML=v; else el.textContent=v;
   });
   document.querySelectorAll("[data-list]").forEach(ul=>{
     ul.innerHTML=""; (d[ul.dataset.list]||[]).forEach(t=>{
@@ -779,7 +829,7 @@ body.edit .imgbtn,body.edit .imgalt{display:block}
 let ALT = {};
 const CHANGED = {img:new Set(), text:false};
 const SLOTS = ["hero","traj1","traj2","traj3","traj4","traj5",
-               "dif1","dif2","dif3","dif4","dif5","dif6",
+               "dif1","dif2","dif3","dif4","dif5","dif6","dif7","dif8",
                "int1","int2","int3","co","ws"];
 
 /* --- restore saved state --- */
@@ -982,6 +1032,5 @@ document.getElementById("e-imgs").addEventListener("click",async()=>{
   }catch(e){}
 })();
 </script>
-
 </body>
 </html>
